@@ -10,7 +10,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
@@ -21,10 +20,9 @@ import javax.sql.DataSource;
  * Created: 2018/6/28 13:19
  * Description:
  */
-@Configuration
+//@Configuration
 @ConditionalOnClass(DruidDataSource.class)
 @ConditionalOnProperty(name = "spring.datasource.type", havingValue = "com.alibaba.druid.pool.DruidDataSource", matchIfMissing = true)
-
 public class DataSourceConfig {
 
     @Bean

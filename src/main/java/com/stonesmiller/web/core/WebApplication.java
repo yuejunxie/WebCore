@@ -2,6 +2,7 @@ package com.stonesmiller.web.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 /**
  * Author: JackyShieh
@@ -10,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Created: 2018/6/28 13:11
  * Description:
  */
-@SpringBootApplication(exclude = {})
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class WebApplication {
 
     public static void main(String[] args) {
